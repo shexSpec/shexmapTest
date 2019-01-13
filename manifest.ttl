@@ -17,8 +17,10 @@
 
 <#simple> a mf:ManifestEntry ;
   mf:name "simple rename of predicate" ;
+  mf:result mf:proposed ;
   mf:action [
     a t:Action ;
+    t:kind t:RoundTrip ;
     t:left [
       t:source <./shapes/one-left.shex> ;
       t:shape  <http://a.example/S1>
@@ -39,8 +41,10 @@
 
 <#minimalRename> a mf:ManifestEntry ;
   mf:name "renaming a predicate uses minimal edges" ;
+  mf:result mf:proposed ;
   mf:action [
     a t:Action ;
+    t:kind t:RoundTrip ;
     t:left [
       t:source <./shapes/two-left.shex> ;
       t:shape  <http://a.example/S1>
@@ -61,8 +65,10 @@
 
 <#cardinatility> a mf:ManifestEntry ;
   mf:name "extra edges to satisfy cardinatility" ;
+  mf:result mf:proposed ;
   mf:action [
     a t:Action ;
+    t:kind t:RoundTrip ;
     t:left [
       t:source <./shapes/three-left.shex> ;
       t:shape  <http://a.example/S1>
