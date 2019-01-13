@@ -1,0 +1,66 @@
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix : <https://raw.githubusercontent.com/shexSpec/shexmapTest/master/testcase.ttl#> .
+
+: rdfs:comment "Vocabulary for describing ShEx-Map test cases" .
+
+:Action rdf:type rdfs:Class ;
+  rdfs:comment "A mf:action range value" .
+
+:Shex rdf:type rdfs:Class ;
+  rdfs:comment "A Shape Expression test fixture" .
+
+:Graph rdf:type rdfs:Class ;
+  rdfs:comment "An RDF graph test fixture" .
+
+:Kind rdf:type rdfs:Class ;
+  rdfs:comment "The type of test described" .
+
+:source rdf:type rdfs:Property ;
+  rdfs:comment "The source from which to parse a test fixture" ;
+  rdfs:domain :Shex , :Graph ;
+  rdfs:range rdfs:Literal . # URL?
+
+:name rdf:type rdfs:Property ;
+  rdfs:comment "The name of the shape in a ShEx fixture source" ;
+  rdfs:domain :Shex ;
+  rdfs:range rdfs:Literal . # URL?
+
+:focus rdf:type rdfs:Property ;
+  rdfs:comment "The name of the focus node in a fixture graph" ;
+  rdfs:domain :Action ;
+  rdfs:range rdfs:Literal . # URL?
+
+:kind rdf:type rdfs:Property ;
+  rdfs:comment "The kind of the test" ;
+  rdfs:domain :Action ;
+  rdfs:range :Kind . # URL?
+
+:left rdf:type rdfs:Property ;
+  rdfs:comment "The 'left' or source Shape Expression fixture" ;
+  rdfs:domain :Action ;
+  rdfs:range :Shex . # URL?
+
+:right rdf:type rdfs:Property ;
+  rdfs:comment "The 'right' or source Shape Expression fixture" ;
+  rdfs:domain :Action ;
+  rdfs:range :Shex . # URL?
+
+:start rdf:type rdfs:Property ;
+  rdfs:comment "The starting graph fixture" ;
+  rdfs:domain :Action ;
+  rdfs:range :Graph . # URL?
+
+:target rdf:type rdfs:Property ;
+  rdfs:comment "The expected result graph fixture" ;
+  rdfs:domain :Action ;
+  rdfs:range :Graph . # URL?
+
+:return rdf:type rdfs:Property ;
+  rdfs:comment "The expected round-trip graph fixture" ;
+  rdfs:domain :Action ;
+  rdfs:range :Graph . # URL?
+
+:RoundTrip rdf:type :Kind ;
+  rdfs:comment "Test describes mapping from one graph to another, and then back to a third (possibly the original)" ;
