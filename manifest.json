@@ -1,0 +1,38 @@
+[
+  {
+    "schemaLabel": "simple rename of predicate",
+    "schemaURL": "./shapes/one-left.shex",
+    "dataLabel": "Single statement",
+    "dataURL": "./graphs/single-statement.ttl",
+    "queryMap": "<http://example/foo>@<http://a.example/S1>",
+    "shexMapTo": {
+      "schemaURL": "./shapes/one-right.shex",
+      "dataURL": "./graphs/different-single-statement.ttl",
+      "queryMap": "<http://example/bar>@<http://b.example/S1>"
+    }
+  },
+  {
+    "schemaLabel": "renaming a predicate uses minimal edges",
+    "schemaURL": "./shapes/two-left.shex",
+    "dataLabel": "Two values from one node",
+    "dataURL": "./graphs/two-values.ttl",
+    "queryMap": "<http://example/foo>@<http://a.example/S1>",
+    "shexMapTo": {
+      "schemaURL": "./shapes/two-right.shex",
+      "dataURL": "./graphs/two-values-different-nodes.ttl",
+      "queryMap": "<http://example/bar>@<http://b.example/S1>"
+    }
+  },
+  {
+    "schemaLabel": "Extra edges to satisfy cardinality",
+    "schemaURL": "./shapes/three-left.shex",
+    "dataLabel": "Two values from one node",
+    "dataURL": "./graphs/two-values.ttl",
+    "queryMap": "<http://example/foo>@<http://a.example/S1>",
+    "shexMapTo": {
+      "schemaURL": "./shapes/three-right.shex",
+      "dataURL": "./graphs/two-nodes.ttl",
+      "queryMap": "<http://example/bar>@<http://b.example/S1>"
+    }
+  }
+]
