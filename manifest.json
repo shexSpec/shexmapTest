@@ -34,5 +34,17 @@
       "dataURL": "./graphs/two-nodes.ttl",
       "queryMap": "<http://example/bar>@<http://b.example/S1>"
     }
+  },
+  {
+    "schemaLabel": "Reverse edges",
+    "schemaURL": "./shapes/reverse-left.shex",
+    "dataLabel": "Doubles back to a value",
+    "dataURL": "./graphs/switchback.ttl",
+    "queryMap": "<http://example/foo>@<http://a.example/S1>",
+    "shexMapTo": {
+      "schemaURL": "./shapes/one-right.shex",
+      "dataURL": "./graphs/different-single-statement.ttl",
+      "queryMap": "<http://example/bar>@<http://b.example/S1>"
+    }
   }
 ]

@@ -1,0 +1,3 @@
+# vi:nomodeline:
+_:A ex:b ex:foo ;
+    ex:c "P" .
